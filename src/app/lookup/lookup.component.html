@@ -1,0 +1,44 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="form-group">
+    <label for="characterName">Tell me about the character</label>
+    <input
+      required
+      minlength="3"
+      ngModel
+      type="text"
+      #characterName
+      name="characterName"
+      class="form-control"
+      placeholder="Character Name">
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="bookName">In the book</label>
+    <input
+    required
+    minlength="3"
+    ngModel
+    type="text"
+    #bookName
+    name="bookName"
+    class="form-control"
+    placeholder="Book Name">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Who is it?</button>
+
+  <div class="form-group">
+    <textarea
+    rows="20"
+    cols="150"
+    disabled="true"
+    class="form-control"
+    id="answer"
+    [(ngModel)]="answer"
+    [ngModelOptions]="{standalone: true}"
+    ></textarea>
+  </div>
+
+</form>
+
+
